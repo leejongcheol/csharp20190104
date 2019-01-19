@@ -11,6 +11,7 @@ class Server
         TcpListener tcpListener = null;
         Socket clientsocket = null;
         StreamReader reader = null;
+        StreamWriter writer = null;
         try
         {
             //IP주소를 나타내는 객체를 생성,TcpListener를 생성시 인자로 사용할려고
@@ -25,10 +26,12 @@ class Server
             stream = new NetworkStream(clientsocket);
             Encoding encode = Encoding.GetEncoding("utf-8");
             reader = new StreamReader(stream, encode);
+            writer = new StreamWriter(stream, encode) { AutoFlush = true };
             while (true)
             {
                 string str = reader.ReadLine();
                 Console.WriteLine(str);
+            writer.WriteLine(str);
             }
         }
         catch (Exception e)
