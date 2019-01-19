@@ -17,6 +17,7 @@ namespace ChatClient
         TcpClient tcpClient;
         StreamReader reader;
         StreamWriter writer;
+
         // Chat_Class cht_Class = new Chat_Class();
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -50,7 +51,7 @@ namespace ChatClient
             else
             {
                 string message = "<" + txt_Name.Text + "> 님께서 접속해제 하셨습니다.";
-          send(message, false);
+                send(message, false);
                 SetText(message + "\r\n");
                 cmd_Connect.Text = "Login";
                 logout();
