@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Text;
-using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
@@ -69,4 +68,4 @@ class TcpClientTest
             client = null;
         }
     }
-}
+}
