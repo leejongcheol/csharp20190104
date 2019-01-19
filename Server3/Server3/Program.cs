@@ -19,8 +19,10 @@ class ClientHadler
         //클라이언트의 데이터를 읽고, 쓰기 위한 스트림을 만든다.
         stream = new NetworkStream(socket);
         Encoding encode = Encoding.GetEncoding("utf-8");
+
         reader = new StreamReader(stream, encode);
         writer = new StreamWriter(stream, encode) { AutoFlush = true };
+
         while (true)
         {
             string str = reader.ReadLine();
