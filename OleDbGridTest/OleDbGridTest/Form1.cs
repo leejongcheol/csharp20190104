@@ -10,7 +10,6 @@ namespace OleDbGridTest
         OleDbConnection conn = null;
         OleDbDataAdapter adapter = null;
         DataSet ds = null;
-
     
         public Form1()
         {
@@ -46,7 +45,6 @@ namespace OleDbGridTest
             {
                 conn.Close();
             }
-
         }
     }
 }
