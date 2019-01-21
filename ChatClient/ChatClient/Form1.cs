@@ -13,6 +13,7 @@ namespace ChatClient
         {
             InitializeComponent();
         }
+
         static Encoding encoding = Encoding.GetEncoding("euc-kr");
         TcpClient tcpClient;
         StreamReader reader;
