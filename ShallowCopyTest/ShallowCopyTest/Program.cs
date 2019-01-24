@@ -12,7 +12,7 @@ class Customer
         return this.MemberwiseClone();
     }
 }
-class ArrayTest
+class ShallowCopyTest
 {
     static void Main()
     {
