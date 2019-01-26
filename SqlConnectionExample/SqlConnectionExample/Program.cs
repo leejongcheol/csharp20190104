@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace SqlConnectionExample
 {
@@ -9,15 +11,16 @@ namespace SqlConnectionExample
         {
             string connectionString = @"Data Source=localhost\OJC;Initial Catalog=test;Integrated Security=true";
 
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            SqlCommand sqlComm = new SqlCommand();
+            OleDbConnection sqlConn = new OleDbConnection(connectionString);
+            OleDbCommand sqlComm = new OleDbCommand();
             sqlComm.Connection = sqlConn;
 
             sqlComm.CommandText = "select top 10 empno, ename, job, sal from emp where job=@Job order by empno asc";
             sqlComm.Parameters.AddWithValue("@Job", "Clerk");
             sqlConn.Open();
 
-            using (SqlDataReader SqlRs = sqlComm.ExecuteReader())
+            OleDbDataReader SqlRs;
+            using (SqlRs = sqlComm.ExecuteReader(CommandBehavior.CloseConnection))
             {
                 Console.WriteLine("Empno | Ename | Job  | Sal");
                 Console.WriteLine("-----------------------------");
@@ -26,7 +29,8 @@ namespace SqlConnectionExample
                     Console.WriteLine($"{SqlRs[0]} | {SqlRs[1]} | {SqlRs[2]} | {SqlRs[3]}");
                 }
             }
-            sqlConn.Close();
+            SqlRs.Close();
+            //sqlConn.Close();
         }
     }
 }

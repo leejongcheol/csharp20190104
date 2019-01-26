@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepCopyTest", "DeepCopyTest\DeepCopyTest.csproj", "{F80CA757-70A0-4CAA-9A25-CD2F31481893}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F80CA757-70A0-4CAA-9A25-CD2F31481893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80CA757-70A0-4CAA-9A25-CD2F31481893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80CA757-70A0-4CAA-9A25-CD2F31481893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80CA757-70A0-4CAA-9A25-CD2F31481893}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28F2221E-3639-4BF4-815A-5C14560B7205}
+	EndGlobalSection
+EndGlobal
